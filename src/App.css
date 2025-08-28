@@ -1,0 +1,387 @@
+/* Umumiy sozlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+    color: #222;
+    padding: 60px 80px;
+    user-select: none;
+  }
+  
+  a.link {
+    color: #2a7ae2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a.link:hover,
+  a.link:focus {
+    color: #155ab4;
+    outline: none;
+  }
+  
+  /* App umumiy konteyner */
+  .app {
+    max-width: 1000px; /* oldingi 1200px o‘rniga */
+    margin: auto;
+    background: #fff;
+    padding: 30px 25px; /* oldingi 40px 35px o‘rniga */
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  
+  /* Sarlavha */
+  .header {
+    margin-bottom: 70px;
+    text-align: center;
+    user-select: text;
+  }
+  
+  .main-title {
+    font-size: 7rem;
+    font-weight: 900;
+    color: #0d2f72;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-shadow: 0 4px 10px rgba(10, 40, 90, 0.3);
+  }
+  
+  .highlight {
+    color: #2a7ae2;
+    background: linear-gradient(45deg, #4299e1, #2a7ae2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s ease-in-out infinite;
+  }
+  
+  @keyframes shine {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Kirish matni */
+  .intro-text {
+    font-size: 2.6rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    user-select: text;
+  }
+  
+  .benefits-list {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 2.2rem;
+    color: #334e68;
+    user-select: text;
+  }
+  
+  .benefits-list li {
+    margin-bottom: 14px;
+  }
+  
+  /* Bo‘lim sarlavhalari */
+  .section-title {
+    font-size: 5rem;
+    color: #1b365d;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #2a7ae2;
+    padding-bottom: 10px;
+    user-select: text;
+  }
+  
+  /* Kurslar grid */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    user-select: text;
+  }
+  
+  /* Kurs kartasi */
+  .course-card {
+    background: #f5faff;
+    border-radius: 18px;
+    box-shadow: 0 4px 25px rgba(42, 122, 226, 0.3);
+    padding: 30px 25px 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    user-select: text;
+  }
+  
+  .course-card:hover,
+  .course-card:focus {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(42, 122, 226, 0.5);
+    outline: none;
+  }
+  
+  .course-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    user-select: none;
+  }
+  
+  .course-name {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    color: #0d2f72;
+    user-select: text;
+  }
+  
+  .course-desc {
+    font-size: 2rem;
+    color: #465a7e;
+    margin-bottom: 20px;
+    user-select: text;
+  }
+  
+  .course-price {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #2a7ae2;
+    user-select: text;
+  }
+  
+  .course-price span {
+    font-weight: 900;
+  }
+  
+  /* Ustozlar qismi */
+  .teachers-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    user-select: text;
+  }
+  
+  .teacher-card {
+    background: #eef5ff;
+    border-radius: 15px;
+    width: 280px;
+    padding: 30px 25px;
+    box-shadow: 0 6px 22px rgba(42, 122, 226, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    user-select: text;
+  }
+  
+  .teacher-card:hover,
+  .teacher-card:focus {
+    transform: translateY(-12px);
+    box-shadow: 0 14px 48px rgba(42, 122, 226, 0.55);
+    outline: none;
+  }
+  
+  .teacher-photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 4px solid #2a7ae2;
+    user-select: none;
+  }
+  
+  .teacher-name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0d2f72;
+    margin-bottom: 8px;
+    user-select: text;
+  }
+  
+  .teacher-specialty {
+    font-size: 2rem;
+    color: #465a7e;
+    user-select: text;
+  }
+  
+  /* Narxlar qismi */
+  .pricing-text {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    color: #334e68;
+    user-select: text;
+  }
+  
+  .pricing-list {
+    list-style-type: none;
+    font-size: 2.2rem;
+    color: #2a7ae2;
+    padding-left: 0;
+    user-select: text;
+  }
+  
+  .pricing-item {
+    background: #f0f7ff;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 8px rgba(42, 122, 226, 0.15);
+    user-select: text;
+  }
+  
+  /* Fikrlar qismi */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+    margin-top: 20px;
+    user-select: text;
+  }
+  
+  .testimonial-card {
+    background: #e9f0ff;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 28px rgba(42, 122, 226, 0.22);
+    font-style: italic;
+    font-size: 2.1rem;
+    color: #0d2f72;
+    user-select: text;
+    position: relative;
+    cursor: default;
+  }
+  
+  .testimonial-feedback {
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+  
+  .testimonial-name {
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+    color: #2a7ae2;
+  }
+  
+  /* Maxsus imtiyozlar qismi */
+  .benefits-detailed {
+    list-style-type: circle;
+    margin-left: 40px;
+    font-size: 2.4rem;
+    color: #334e68;
+    user-select: text;
+  }
+  
+  .benefits-detailed li {
+    margin-bottom: 18px;
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 100px;
+    background: linear-gradient(135deg, #2a7ae2, #155ab4);
+    color: #fff;
+    padding: 60px 80px;
+    border-radius: 0 0 20px 20px;
+    user-select: text;
+    box-shadow: 0 -10px 40px rgba(10, 40, 90, 0.5);
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  
+  .footer-about,
+  .footer-contact {
+    flex: 1 1 400px;
+    user-select: text;
+  }
+  
+  .footer-about h3,
+  .footer-contact h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    user-select: text;
+  }
+  
+  .footer-about p,
+  .footer-contact p {
+    font-size: 2rem;
+    line-height: 1.5;
+    user-select: text;
+  }
+  
+  .footer-bottom {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    opacity: 0.85;
+    user-select: text;
+  }
+  
+  /* Responsive dizayn */
+  
+  /* Kichik ekran uchun */
+  @media (max-width: 1200px) {
+    body {
+      padding: 50px 40px;
+    }
+    .app {
+      padding: 50px 40px 70px;
+    }
+    .main-title {
+      font-size: 6rem;
+    }
+    .section-title {
+      font-size: 4.5rem;
+    }
+    .courses-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding: 40px 25px;
+    }
+    .app {
+      padding: 45px 25px 60px;
+    }
+    .main-title {
+      font-size: 4.8rem;
+    }
+    .section-title {
+      font-size: 3.8rem;
+    }
+    .courses-grid,
+    .teachers-grid,
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+    .footer-container {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .footer-about,
+    .footer-contact {
+      flex: 1 1 100%;
+    }
+    .footer {
+      padding: 40px 25px;
+    }
+  }
+  
+  
